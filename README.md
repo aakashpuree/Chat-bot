@@ -8,7 +8,7 @@ Welcome to **Kinom**, a sleek and interactive digital currency marketplace websi
 
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
 - **Smooth Animations**: Page load animations, scroll-triggered effects, and hover interactions
-- **AI Chatbot**: Integrated Vue.js-powered chatbot with conversation starters and typing indicators
+- **AI Chatbot**: Integrated js powered chatbot with conversation starters and typing indicators
 - **Modern UI**: Built with Tailwind CSS for a clean, professional look
 - **Interactive Elements**: Hover effects, gradients, and micro-animations throughout the site
 - **Real-time Chat**: Instant responses to user queries about the platform
@@ -123,3 +123,4 @@ Potential improvements for this project:
 ---
 
 **Happy coding!** 🎉 If you're new to web development, this project is a great starting point to learn about modern frontend technologies, animations, and interactive UI components.
+
