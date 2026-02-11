@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kinom - Digital Currency Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        /* Page load animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(99, 102, 241, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(99, 102, 241, 0.8), 0 0 30px rgba(147, 51, 234, 0.6);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Chat transition animations */
+        .chat-enter-active, .chat-leave-active {
+            transition: all 0.3s ease;
+        }
+        .chat-enter-from, .chat-leave-to {
+            opacity: 0;
+            transform: translateY(20px) scale(0.95);
+        }
+
+        /* Custom scrollbar */
+        .messages-container::-webkit-scrollbar {
+            width: 6px;
+        }
+        .messages-container::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .messages-container::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 3px;
+        }
+        .messages-container::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+
+        /* Animated elements */
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-slide-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .animate-slide-up.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-slide-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-slide-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .hover-glow:hover {
+            animation: glow 2s infinite;
+        }
+
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .hover-scale:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .pulse-online {
+            animation: pulse 2s infinite;
+        }
+
+        /* Enhanced gradients and backgrounds */
+        .bg-gradient-enhanced {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .bg-gradient-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 50%, #4facfe 100%);
+        }
+
+        /* Smooth transitions */
+        * {
+            transition: all 0.3s ease;
+        }
+
+        button, input, .card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
+
+    <!-- Simple Website Content -->
+    <header class="bg-white shadow-lg animate-fade-in">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-3xl font-bold text-gray-800 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Kinom</h1>
+            <p class="text-gray-600">Your Trusted Digital Currency Marketplace</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <section class="mb-8 animate-slide-up">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Welcome to Kinom</h2>
+            <p class="text-gray-700 mb-4">Discover a seamless platform to buy and sell digital currency products. Whether you're a buyer or seller, Kinom makes it easy to manage your transactions.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover-scale hover-glow animate-slide-left">
+                    <h3 class="text-xl font-semibold mb-2 text-indigo-600">For Buyers</h3>
+                    <p class="text-gray-600">Browse products, add to cart, and complete secure purchases.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover-scale hover-glow animate-slide-right">
+                    <h3 class="text-xl font-semibold mb-2 text-purple-600">For Sellers</h3>
+                    <p class="text-gray-600">List your products, manage inventory, and track sales effortlessly.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-8 animate-slide-up">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Features</h2>
+            <ul class="list-disc list-inside text-gray-700 space-y-2 bg-white p-6 rounded-xl shadow-lg">
+                <li class="hover:text-indigo-600 transition-colors">Secure account management</li>
+                <li class="hover:text-indigo-600 transition-colors">Real-time order tracking</li>
+                <li class="hover:text-indigo-600 transition-colors">Insights and analytics</li>
+                <li class="hover:text-indigo-600 transition-colors">Integrated chat support</li>
+            </ul>
+        </section>
+
+        <section class="animate-slide-up">
+            <h2 class="text-2xl font-semibold mb-4 text-gray-800">Get Started</h2>
+            <p class="text-gray-700 mb-4">Sign up today and join the Kinom community!</p>
+            <button class="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover-scale hover-glow shadow-lg">Join Now</button>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-4 animate-fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2026 Kinom. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AI Chatbot Integration -->
+    <div id="app">
+        <button
+          @click="toggleChat"
+          class="fixed bottom-5 right-5 w-14 h-14 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 border-none cursor-pointer shadow-lg z-[9999] flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-xl"
+        >
+          <svg v-if="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" />
+          </svg>
+          <svg v-else xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <transition name="chat">
+          <div v-if="isOpen" class="fixed bottom-24 right-5 w-[380px] h-[550px] rounded-2xl overflow-hidden shadow-2xl z-[9998] bg-white flex flex-col">
+            <div class="bg-gradient-to-r from-indigo-500 to-purple-600 px-4 py-3 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-white font-semibold text-base m-0">Kinom Assistant</h3>
+                <p class="text-white/80 text-xs m-0 pulse-online">Online • Ready to help</p>
+              </div>
+              <button @click="toggleChat" class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/30 transition-colors cursor-pointer border-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="flex-1 overflow-y-auto p-4 bg-gray-50 messages-container" ref="messagesContainer">
+              <div v-if="messages.length === 0" class="flex flex-col items-center justify-center h-full text-center px-4">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" />
+                  </svg>
+                </div>
+                <h4 class="text-gray-800 font-semibold text-lg mb-2">Hello! 👋</h4>
+                <p class="text-gray-500 text-sm mb-4">How can I assist you today?</p>
+                <div class="flex flex-col gap-2 w-full">
+                  <button v-for="starter in conversationStarters" :key="starter" @click="sendMessage(starter)" class="w-full px-3 py-2 text-sm text-left bg-white border border-gray-200 rounded-lg hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 hover:border-indigo-300 hover-scale cursor-pointer text-gray-700 transition-all">
+                    {{ starter }}
+                  </button>
+                </div>
+              </div>
+
+              <div v-else class="flex flex-col gap-3">
+                <div v-for="(msg, index) in messages" :key="index" :class="['max-w-[85%] px-4 py-2 rounded-2xl text-sm', msg.type === 'user' ? 'self-end bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-br-md' : 'self-start bg-white text-gray-800 shadow-sm border border-gray-100 rounded-bl-md']">
+                  <p class="m-0 whitespace-pre-wrap">{{ msg.text }}</p>
+                </div>
+                <div v-if="isTyping" class="self-start bg-white px-4 py-3 rounded-2xl rounded-bl-md shadow-sm border border-gray-100 hover-scale">
+                  <div class="flex gap-1">
+                    <span class="w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full animate-bounce"></span>
+                    <span class="w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full animate-bounce" style="animation-delay: 150ms"></span>
+                    <span class="w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full animate-bounce" style="animation-delay: 300ms"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-3 bg-white border-t border-gray-200">
+              <form @submit.prevent="handleSubmit" class="flex gap-2">
+                <input v-model="inputMessage" type="text" placeholder="Type your message..." class="flex-1 px-4 py-2 border border-gray-200 rounded-full text-sm focus:outline-none focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 transition-all" :disabled="isTyping" />
+                <button type="submit" :disabled="!inputMessage.trim() || isTyping" class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center cursor-pointer border-none disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-lg hover-scale transition-all">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </transition>
+    </div>
+
+    <script>
+        const { createApp, ref, nextTick, watch, onMounted } = Vue;
+
+        createApp({
+            setup() {
+                const isOpen = ref(false);
+                const inputMessage = ref('');
+                const messages = ref([]);
+                const isTyping = ref(false);
+                const messagesContainer = ref(null);
+
+                const conversationStarters = [
+                    'How do I create an account?',
+                    'How can I buy products?',
+                    'Where can I manage my listings?',
+                    'How do I track my orders?'
+                ];
+
+                const knowledgeBase = {
+                    greeting: "Hello! 👋 How can I assist you today?",
+                    account: "To create an account on Kinom:\n\n1. Visit the homepage\n2. Click 'Signup' in the navigation\n3. Fill in your details\n4. Verify your email\n\nNeed help with anything else?",
+                    buy: "To buy digital currency products:\n\n1. Login to your account\n2. Go to Dashboard → Products\n3. Browse and 'Add to Cart'\n4. Review in Carts and complete in Orders.",
+                    sell: "To sell products on Kinom:\n\n1. Login to your dashboard\n2. Go to Dashboard → Your Products\n3. Click 'Add New Product'\n4. Manage inventory and track sales in Orders.",
+                    orders: "To track your orders:\n\n1. Login to your dashboard\n2. Go to Dashboard → Orders\n3. View purchase and sale history.",
+                    cart: "To manage your cart:\n\n1. Go to Dashboard → Carts\n2. Adjust quantities\n3. Proceed to checkout.",
+                    insights: "The Insights page provides analytics, sales reports, and market trends. Access it at Dashboard → Insights.",
+                    chat: "Communicate via Dashboard → Chats. You can also use the Contact section on the homepage for support.",
+                    navigation: "Public: Home (/), Login, Signup.\nDashboard: Products, Carts, Orders, Insights, Your Products, Chats.",
+                    default: "I'm here to help with Kinom! I can assist with accounts, buying, selling, and tracking orders. What would you like to know?"
+                };
+
+                const toggleChat = () => { isOpen.value = !isOpen.value; };
+
+                const scrollToBottom = async () => {
+                    await nextTick();
+                    if (messagesContainer.value) {
+                        messagesContainer.value.scrollTop = messagesContainer.value.scrollHeight;
+                    }
+                };
+
+                const getBotResponse = (userMessage) => {
+                    const msg = userMessage.toLowerCase();
+                    if (msg.includes('hello') || msg.includes('hi')) return knowledgeBase.greeting;
+                    if (msg.includes('account') || msg.includes('signup') || msg.includes('create')) return knowledgeBase.account;
+                    if (msg.includes('buy') || msg.includes('products')) return knowledgeBase.buy;
+                    if (msg.includes('sell') || msg.includes('listing')) return knowledgeBase.sell;
+                    if (msg.includes('order') || msg.includes('track')) return knowledgeBase.orders;
+                    if (msg.includes('cart')) return knowledgeBase.cart;
+                    if (msg.includes('insight') || msg.includes('analytics')) return knowledgeBase.insights;
+                    if (msg.includes('chat') || msg.includes('support')) return knowledgeBase.chat;
+                    if (msg.includes('navigate') || msg.includes('where')) return knowledgeBase.navigation;
+                    return knowledgeBase.default;
+                };
+
+                const sendMessage = async (text) => {
+                    const messageText = text || inputMessage.value.trim();
+                    if (!messageText) return;
+
+                    messages.value.push({ type: 'user', text: messageText });
+                    inputMessage.value = '';
+                    await scrollToBottom();
+
+                    isTyping.value = true;
+                    await scrollToBottom();
+
+                    setTimeout(async () => {
+                        isTyping.value = false;
+                        messages.value.push({ type: 'bot', text: getBotResponse(messageText) });
+                        await scrollToBottom();
+                    }, 1000 + Math.random() * 500);
+                };
+
+                const handleSubmit = () => sendMessage();
+
+                // Intersection Observer for scroll animations
+                onMounted(() => {
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('animate');
+                            }
+                        });
+                    }, { threshold: 0.1 });
+
+                    document.querySelectorAll('.animate-slide-up').forEach(el => {
+                        observer.observe(el);
+                    });
+                });
+
+                watch(messages, scrollToBottom, { deep: true });
+
+                return {
+                    isOpen, inputMessage, messages, isTyping, messagesContainer,
+                    conversationStarters, toggleChat, sendMessage, handleSubmit
+                };
+            }
+        }).mount('#app');
+    </script>
+
+</body>
+</html>
