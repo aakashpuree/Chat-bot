@@ -1,9 +1,9 @@
-# Kinom - Digital Currency Marketplace
+# Kinom -Chat-bot 
 
-
-
-Welcome to **Kinom**, a sleek and interactive digital currency marketplace website featuring an AI-powered chatbot assistant. This project demonstrates modern web development techniques with beautiful animations and a responsive design.
-
+Welcome to **Kinom**, a sleek and interactive digital currency marketplace website featuring an AI-powered chatbot assistant. 
+This project demonstrates modern web development techniques with beautiful animations and a responsive design.
+ ## to checkout the chatbot in website vists this : https://aakashpuri786.github.io/Chat-bot/  
+  -- chatbot is in the bottom right of the website and the website is made just for showing showing the chat-bot 
 ## 🚀 Features
 
 - **Responsive Design**: Optimized for desktop, tablet, and mobile devices
@@ -16,8 +16,8 @@ Welcome to **Kinom**, a sleek and interactive digital currency marketplace websi
 ## 🛠️ Technologies Used
 
 - **HTML5**: Structure and content
-- **Tailwind CSS**: Utility-first CSS framework for styling
-- **Vue.js 3**: Reactive JavaScript framework for the chatbot functionality
+- **CSS**: Utility-first CSS framework for styling
+- **Javascript**: Reactive JavaScript framework for the chatbot functionality
 - **CSS3 Animations**: Custom keyframes for smooth transitions and effects
 
 ## 📋 Prerequisites
@@ -28,34 +28,11 @@ Before you begin, ensure you have:
 
 ## 🏁 Getting Started
 
-Follow these simple steps to get the project up and running on your local machine:
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/Aakashpuri786/Chat-bot.git
-cd Chat-bot
-```
+Follow these simple steps to get the project up and running on your local browser
 
 
-
-### 2. Open the Website
-
-Simply open the `kinom_bot.html` file in your web browser:
-
-- **Windows**: Double-click the file or right-click and select "Open with" > your browser
-- **macOS**: Double-click the file
-- **Linux**: Open with your preferred browser from the file manager
-
-Alternatively, you can drag and drop the file into your browser window.
-
-### 3. Explore the Site
-
-- Browse the main sections: Welcome, Features, and Get Started
-- Interact with the animated elements (hover over cards and buttons)
-- Open the chatbot by clicking the chat icon in the bottom-right corner
-- Try the conversation starters or type your own messages
-
+### 1. Open the Website
+* directly open the website of the bot result : https://aakashpuri786.github.io/Chat-bot/  <- click it 
 ## 📖 Usage
 
 ### Navigating the Website
@@ -76,7 +53,7 @@ Alternatively, you can drag and drop the file into your browser window.
    - And more!
 
 ### Customization
-To modify the chatbot's responses, edit the `knowledgeBase` object in the JavaScript section of `kinom_bot.html`.
+To modify the chatbot's responses, edit the `knowledgeBase` object in the JavaScript section of `index.html`.
 
 ## 🎨 Design Highlights
 
@@ -111,14 +88,6 @@ If you have any questions or need help:
 - Check the chatbot in the website for platform-specific questions
 - Review the code comments for technical details
 
-## 🔄 Future Enhancements
-
-Potential improvements for this project:
-- Backend integration for real user accounts and transactions
-- Advanced chatbot with natural language processing
-- Dark mode toggle
-- Multi-language support
-- Performance optimizations
 
 ---
 
