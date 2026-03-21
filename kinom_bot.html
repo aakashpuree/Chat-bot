@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kinom — A trusted marketplace to buy and sell rare and collectible banknotes, paper currency, and notes with unique serial numbers and symbols.">
+    <title>Kinom — Paper Currency &amp; Banknote Marketplace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="kinom_bot.css">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-k">K</span>inom
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about"        class="nav-link">About</a></li>
+                <li><a href="#features"     class="nav-link">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#contact"      class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#" class="btn-outline">Log In</a>
+                <a href="#" class="btn-primary">Sign Up</a>
+            </div>
+            <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-orb orb-1"></div>
+        <div class="hero-bg-orb orb-2"></div>
+        <div class="hero-content animate-fadein">
+            <span class="hero-badge">Rare · Authentic · Collectible</span>
+            <h1 class="hero-title">Buy &amp; Sell <span class="text-accent">Rare Banknotes</span> with Confidence</h1>
+            <p class="hero-sub">Kinom is a dedicated marketplace for collectors and traders of real paper currency — notes with unique serial numbers, rare symbols, error prints, and historical significance.</p>
+            <div class="hero-cta">
+                <a href="#" class="btn-primary btn-lg">Start Collecting</a>
+                <a href="#how-it-works" class="btn-ghost btn-lg">See How It Works</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">8K+</span>
+                    <span class="stat-label">Collectors</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">50K+</span>
+                    <span class="stat-label">Notes Listed</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">98%</span>
+                    <span class="stat-label">Verified Authentic</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual animate-fadein-delay">
+            <div class="hero-card-mockup">
+                <div class="mockup-header">
+                    <span class="mockup-dot red"></span>
+                    <span class="mockup-dot yellow"></span>
+                    <span class="mockup-dot green"></span>
+                    <span class="mockup-title">Kinom Dashboard</span>
+                </div>
+                <div class="mockup-body">
+                    <div class="mockup-stat-row">
+                        <div class="mockup-stat">
+                            <div class="mockup-label">Collection Value</div>
+                            <div class="mockup-val blue">₹ 24,800</div>
+                        </div>
+                        <div class="mockup-stat">
+                            <div class="mockup-label">Notes Listed</div>
+                            <div class="mockup-val green">+14 new</div>
+                        </div>
+                    </div>
+                    <div class="mockup-chart">
+                        <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                            <polyline points="0,50 30,38 60,42 90,22 120,30 150,10 180,18 200,8" fill="none" stroke="#1d6df4" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="0,50 30,38 60,42 90,22 120,30 150,10 180,18 200,8 200,60 0,60" fill="url(#chartGrad)" opacity="0.18"/>
+                            <defs>
+                                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#1d6df4"/>
+                                    <stop offset="100%" stop-color="#ffffff"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="mockup-transactions">
+                        <div class="mockup-tx">
+                            <span class="tx-icon buy">₹</span>
+                            <div class="tx-info">
+                                <div class="tx-name">1947 Gandhi Note — Fancy Serial</div>
+                                <div class="tx-date">Today, 10:22 AM</div>
+                            </div>
+                            <div class="tx-amount buy">+₹3,200</div>
+                        </div>
+                        <div class="mockup-tx">
+                            <span class="tx-icon sell">£</span>
+                            <div class="tx-info">
+                                <div class="tx-name">British Colonial ₤5 Note</div>
+                                <div class="tx-date">Yesterday, 2:15 PM</div>
+                            </div>
+                            <div class="tx-amount sell">-₹1,800</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section about-section" id="about">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Who We Are</span>
+                <h2 class="section-title">A Home for Currency Enthusiasts</h2>
+                <p class="section-sub">Kinom connects buyers and sellers of real paper currency — from everyday rare notes to historically significant banknotes bearing unique symbols, signatures, and serial patterns.</p>
+            </div>
+            <div class="cards-grid">
+                <div class="feature-card animate-slide-up">
+                    <div class="card-icon blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    </div>
+                    <h3>For Buyers</h3>
+                    <p>Browse thousands of verified banknotes — sorted by country, era, rarity, and unique attributes like fancy serial numbers, error prints, and commemorative symbols.</p>
+                    <a href="#" class="card-link">Browse Collection →</a>
+                </div>
+                <div class="feature-card animate-slide-up delay-1">
+                    <div class="card-icon white">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+                    </div>
+                    <h3>For Sellers</h3>
+                    <p>List your collection with detailed descriptions, condition grades, and high-resolution photos. Reach a community of serious collectors who value what you offer.</p>
+                    <a href="#" class="card-link">Start Selling →</a>
+                </div>
+                <div class="feature-card animate-slide-up delay-2">
+                    <div class="card-icon blue">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5zm0 4l4 4-1.41 1.41L12 7.83l-1.59 1.58L9 8z"/></svg>
+                    </div>
+                    <h3>Verified &amp; Safe</h3>
+                    <p>Every note listing goes through our authenticity review process. Buyers can trade with confidence knowing each item is verified and accurately described.</p>
+                    <a href="#" class="card-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURES ========== -->
+    <section class="section features-section" id="features">
+        <div class="section-container">
+            <div class="section-header light">
+                <span class="section-tag-light">What You Get</span>
+                <h2 class="section-title light">Everything a Collector Needs</h2>
+                <p class="section-sub light">Powerful tools for discovering, buying, and selling rare paper currency — all under one roof.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feat-item">
+                    <div class="feat-icon">🔍</div>
+                    <div>
+                        <h4>Advanced Search &amp; Filters</h4>
+                        <p>Find notes by country, denomination, year, condition grade, or unique serial patterns and symbols.</p>
+                    </div>
+                </div>
+                <div class="feat-item">
+                    <div class="feat-icon">🛡️</div>
+                    <div>
+                        <h4>Authenticity Verification</h4>
+                        <p>Our team reviews each listing for condition grading, security features, and unique symbol accuracy.</p>
+                    </div>
+                </div>
+                <div class="feat-item">
+                    <div class="feat-icon">📦</div>
+                    <div>
+                        <h4>Real-time Order Tracking</h4>
+                        <p>Monitor every purchase with live status updates — from payment to safe delivery at your doorstep.</p>
+                    </div>
+                </div>
+                <div class="feat-item">
+                    <div class="feat-icon">📊</div>
+                    <div>
+                        <h4>Market Price Insights</h4>
+                        <p>Access trend data, historical sale prices, and demand analytics for any note category you trade in.</p>
+                    </div>
+                </div>
+                <div class="feat-item">
+                    <div class="feat-icon">💬</div>
+                    <div>
+                        <h4>Direct Messaging</h4>
+                        <p>Chat directly with sellers or buyers to negotiate, ask questions, and build lasting collector relationships.</p>
+                    </div>
+                </div>
+                <div class="feat-item">
+                    <div class="feat-icon">🌏</div>
+                    <div>
+                        <h4>Global Community</h4>
+                        <p>Connect with collectors worldwide — trade Indian colonial notes, world currency, and commemorative series.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== HOW IT WORKS ========== -->
+    <section class="section how-section" id="how-it-works">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How Kinom Works</h2>
+                <p class="section-sub">List or discover rare banknotes in three simple steps.</p>
+            </div>
+            <div class="steps-row">
+                <div class="step-item">
+                    <div class="step-num">01</div>
+                    <h4>Create Your Account</h4>
+                    <p>Sign up, verify your email, and set up your collector profile with preferences and watchlist.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-item">
+                    <div class="step-num">02</div>
+                    <h4>Browse or List Notes</h4>
+                    <p>Search the catalogue for notes you love, or list your own with photos, condition grade, and unique symbols.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-item">
+                    <div class="step-num">03</div>
+                    <h4>Trade with Confidence</h4>
+                    <p>Complete transactions securely, track your shipment, and manage your collection from your dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Grow Your Collection?</h2>
+            <p>Join thousands of collectors on Kinom and discover rare banknotes with unique symbols, signatures, and stories.</p>
+            <a href="#" class="btn-primary btn-lg">Create Free Account</a>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact-section" id="contact">
+        <div class="section-container contact-grid">
+            <div class="contact-info">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Have Questions?</h2>
+                <p>Our support team is here to help — whether you need guidance on listing a rare note or understanding its unique symbols and market value.</p>
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <span>support@kinom.io</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🌐</span>
+                    <span>www.kinom.io</span>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <span>Chat with our assistant — bottom left corner!</span>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <input type="text"  placeholder="Your Name"        class="form-input" required>
+                <input type="email" placeholder="Email Address"    class="form-input" required>
+                <textarea           placeholder="Your Message"     class="form-input form-textarea" rows="4" required></textarea>
+                <button type="submit" class="btn-primary btn-full">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo"><span class="logo-k">K</span>inom</span>
+                <p>Your trusted marketplace for rare paper currency and collectible banknotes.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h5>Platform</h5>
+                    <ul>
+                        <li><a href="#">Dashboard</a></li>
+                        <li><a href="#">Browse Notes</a></li>
+                        <li><a href="#">My Listings</a></li>
+                        <li><a href="#">Orders</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kinom. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ========== CHATBOT (bottom-left) ========== -->
+    <div id="chatbot-wrapper">
+        <!-- Chat Window (opens above the button) -->
+        <div class="chat-window" id="chatWindow" aria-hidden="true">
+            <div class="chat-header">
+                <div class="chat-avatar">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                </div>
+                <div class="chat-header-info">
+                    <span class="chat-name">Kinom Assistant</span>
+                    <span class="chat-status"><span class="online-dot"></span>Online · Ready to help</span>
+                </div>
+                <button class="chat-close-btn" id="chatClose" aria-label="Close chat">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-empty" id="chatEmpty">
+                    <div class="chat-empty-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                        </svg>
+                    </div>
+                    <h4>Hello! 👋</h4>
+                    <p>Ask me anything about Kinom's banknote marketplace.</p>
+                    <div class="starter-btns" id="starterBtns">
+                        <button class="starter-btn" onclick="sendStarter(this)">How do I create an account?</button>
+                        <button class="starter-btn" onclick="sendStarter(this)">How do I buy a rare note?</button>
+                        <button class="starter-btn" onclick="sendStarter(this)">How do I list my banknotes?</button>
+                        <button class="starter-btn" onclick="sendStarter(this)">How do I track my orders?</button>
+                    </div>
+                </div>
+                <div class="chat-msg-list" id="chatMsgList"></div>
+            </div>
+            <div class="chat-input-area">
+                <form class="chat-form" id="chatForm">
+                    <input type="text" id="chatInput" class="chat-input" placeholder="Type your message…" autocomplete="off">
+                    <button type="submit" class="chat-send-btn" id="chatSendBtn" aria-label="Send">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- FAB Toggle Button -->
+        <button class="chat-fab" id="chatFab" aria-label="Open chat assistant">
+            <svg id="fabIconChat" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+            </svg>
+            <svg id="fabIconClose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="display:none;">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+            <span class="fab-badge" id="fabBadge">1</span>
+        </button>
+    </div>
+
+    <script src="kinom_bot.js"></script>
+</body>
+</html>
