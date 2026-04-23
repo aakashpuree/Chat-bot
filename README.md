@@ -2,7 +2,7 @@
 
 Welcome to **Kinom**, a sleek and interactive digital currency marketplace website featuring an AI-powered chatbot assistant. 
 This project demonstrates modern web development techniques with beautiful animations and a responsive design.
- ## to checkout the chatbot in website vists this : https://aakashpuri786.github.io/Chat-bot/  
+ ## to checkout the chatbot in website vists this : https://aakashpuree.github.io/Chat-bot/  
   -- chatbot is in the bottom right of the website and the website is made just for showing showing the chat-bot 
 ## 🚀 Features
 
@@ -32,7 +32,7 @@ Follow these simple steps to get the project up and running on your local browse
 
 
 ### 1. Open the Website
-* directly open the website of the bot result : https://aakashpuri786.github.io/Chat-bot/  <- click it 
+* directly open the website of the bot result : https://aakashpuree.github.io/Chat-bot/  <- click it 
 ## 📖 Usage
 
 ### Navigating the Website
