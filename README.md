@@ -87,7 +87,7 @@ If you have any questions or need help:
 - Open an issue on GitHub
 - Check the chatbot in the website for platform-specific questions
 - Review the code comments for technical details
-
+- you can message me in username @aakashpuree in everywhere
 
 ---
 ## you can also call me if you want that type of chatbot.
