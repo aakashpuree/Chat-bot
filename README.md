@@ -1,6 +1,6 @@
 # Kinom-Chat-bot 
 
-Welcome to **Kinom**, a sleek and interactive digital currency marketplace website featuring an AI-powered chatbot assistant. 
+Wellcome to **Kinom**, a sleek and interactive digital currency marketplace website featuring an AI-powered chatbot assistant. 
 This project demonstrates modern web development techniques with beautiful animations and a responsive design.
  ## to checkout the chatbot in website vists this : https://aakashpuree.github.io/Chat-bot/  
   -- chatbot is in the bottom right of the website and the website is made just for showing showing the chat-bot 
